@@ -1,7 +1,15 @@
 import React from 'react';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { HomePage,RestaurantPage } from './pages';
 
 const App = () =>
-  <div>Clé d'API de mon projet DatoCMS: {process.env.REACT_APP_DATOCMS_API_TOKEN}</div>
+<BrowserRouter>
+<Switch>
+  <Route exact path='/' component={HomePage} />
+  <Route exact path='/restaurant/:slug' component={RestaurantPage} />
+
+</Switch>
+</BrowserRouter>
 ;
 
 export default App;

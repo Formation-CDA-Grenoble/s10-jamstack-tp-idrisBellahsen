@@ -9,7 +9,7 @@ export default class DataContainer extends Component {
 
   componentDidMount = () => {
     const { query } = this.props;
-    
+    console.log(process.env.REACT_APP_DATOCMS_API_TOKEN)
     Axios.post(
       // GraphQL endpoint
       'https://graphql.datocms.com/',
@@ -18,7 +18,7 @@ export default class DataContainer extends Component {
       // Options pour authentifier notre requête
       {
         headers: {
-          Authorization: `Bearer ${process.env.REACT_APP_DATOCMS_API_KEY}`,
+          Authorization: `Bearer ${process.env.REACT_APP_DATOCMS_API_TOKEN}`,
         } 
       },
     )

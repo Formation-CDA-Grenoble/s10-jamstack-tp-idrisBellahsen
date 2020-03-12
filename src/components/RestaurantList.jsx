@@ -1,5 +1,5 @@
 import React from 'react';
-import RestaurantPreview from './ArticlePreview';
+import RestaurantPreview from './RestaurantPreview';
 
 const Styles = {
   ul: {
@@ -13,11 +13,11 @@ const Styles = {
   },
 };
 
-const RestaurantList = ({ articles }) =>
+const RestaurantList = ({ restaurants }) =>
   <ul style={Styles.ul}>
-    {articles.map( (article, index) =>
+    {restaurants.map( (restaurant, index) =>
       <li key={index} style={Styles.li}>
-        <RestaurantPreview {...article} />
+        <RestaurantPreview {...restaurant} />
       </li>
     )}
   </ul>

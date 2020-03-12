@@ -1,0 +1,31 @@
+import React, { Component } from 'react';
+import { Jumbotron, Button, Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
+export default class Restaurant extends Component {
+  state = {
+    commentaire: [],
+  }
+
+  render = () => {
+    const restaurant = (this.props.restaurant)
+    return (
+          <article>
+              {console.log(restaurant)}
+    <Jumbotron>
+      <h1>{restaurant.name}</h1>
+      <Image fluid src={restaurant.image.url} />
+    </Jumbotron>
+    <div dangerouslySetInnerHTML={{ __html: restaurant.description }} />
+    <p>N°:{restaurant.phone}</p>
+    <p>Adresse: {restaurant.address}</p>
+    <Link to="/">
+      <Button variant="secondary">Back to Home</Button>
+    </Link>
+  </article>
+     
+    );
+  }
+
+    
+}
