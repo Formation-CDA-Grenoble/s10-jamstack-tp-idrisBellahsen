@@ -1,4 +1,4 @@
-.TheMap {
-    height: 400px;
-    width: 30%;
-  }
+.leaflet-container {
+  height: 400px;
+  width: 30%;
+}
