@@ -13,6 +13,10 @@ query MyQuery {
       image {
         url
       }
+      localisation {
+        latitude
+        longitude
+      }
     }
   }
 `;
