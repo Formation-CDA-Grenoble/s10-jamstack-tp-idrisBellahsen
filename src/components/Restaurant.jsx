@@ -23,7 +23,7 @@ export default class Restaurant extends Component {
     <div dangerouslySetInnerHTML={{ __html: restaurant.description }} />
     <p>N°:{restaurant.phone}</p>
     <p>Adresse: {restaurant.address}</p>
-    <MapLeaf position={position}/>
+    <MapLeaf position={position} {...restaurant}/>
     <Link to="/">
       <Button variant="secondary">Back to Home</Button>
     </Link>
